@@ -1,0 +1,18 @@
+# Datasets e Imagens (Arquivos pesados)
+dataset/
+dataset_split/
+dataset_split.zip
+
+# Pastas de Treinamento e Output do YOLO
+output/
+runs/
+totototo/
+
+# Ambiente Virtual Python
+env/
+
+# Caches e arquivos temporários do Python/OS
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store

@@ -1,0 +1,7 @@
+path: c:/projetos/Visao_Computacional/Desafios/Desafio-1/dataset_split
+train: train/images
+val: val/images
+test: test/images
+# Classes
+names:
+  0: parafuso

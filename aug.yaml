@@ -1,0 +1,17 @@
+# YOLO Hyperparameters for Fine-Tuning - Mobile Scattered Objects (Screws)
+# Foco: Lidar com rotação livre na mesa, reflexos de flash em metal e amontoados de peças.
+
+# 1. Augments Geométricos (Posicionamento e Câmera)
+degrees: 90.0      # Rotação extrema (+/- 90 graus). O parafuso não tem cima/baixo.
+flipud: 0.5        # Virar imagem de cabeça para baixo (50% de chance).
+fliplr: 0.5        # Virar da esquerda pra direita (50% de chance - padrão YOLO).
+scale: 0.6         # Variância de zoom (+/- 60%). Simula o celular mais perto/longe da mesa.
+
+# 2. Augments Fotométricos (Luz e Reflexo)
+hsv_v: 0.5         # Variância de brilho. Aumentado para lidar com flash e reflexo no metal.
+hsv_s: 0.7         # Variância de saturação da cor.
+hsv_h: 0.015       # Variância de matiz da cor.
+
+# 3. Augments de Composição (Agrupamento e Oclusão)
+mosaic: 1.0        # Mistura 4 imagens em 1. Força a detecção de objetos menores no contexto.
+copy_paste: 0.1    # Copia parafusos de uma foto e cola em outra (10% de chance) para simular oclusão densa.
